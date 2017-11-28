@@ -53,10 +53,10 @@
 		}
 	}
 	&--cream-shadow{
-		box-shadow: 0 8px 40px rgba(250, 190, 160, 0.8);
+		box-shadow: 0 8px 40px rgba(188, 203, 222, 0.8);
 
 		&:hover{
-			box-shadow: 0 10px 47px rgba(250, 190, 160, 0.9);
+			box-shadow: 0 10px 47px rgba(188, 203, 222, 0.9);
 		}
 
 		@media (#{$max_phones}){

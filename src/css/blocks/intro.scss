@@ -555,6 +555,25 @@ $decor_square_width: $decor_square_height;
 		opacity: 1;
 	}
 }
+.outro__button_box{
+	position: absolute;
+	opacity: 0;
+	bottom: 100px;
+
+	@media (#{$min_high}){
+		bottom: 600px;
+	}
+	@media (#{$max_laptop}){
+		bottom: 480px;
+	}
+
+	transition: opacity 0.7s ease;
+	transition-delay: #{$intro__scroll_down_line_moving_time + $intro__scroll_down_line_moving_time * 0.5 + $small_horizontal_live_moving_time + $big_live_moving_time * 0.9 + $small_vertical_live_moving_time}s;
+
+	.state-intro-lines-started-moving &{
+		opacity: 1;
+	}
+}
 .intro__buy_button_box{
 	right: #{-($decor_square_height/2)}px;
 

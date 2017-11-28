@@ -1,6 +1,6 @@
 {
-  "name": "Brut_Presentation",
-  "version": "1.2.2",
+  "name": "Undefinedist",
+  "version": "1.0.0",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
