@@ -1,0 +1,82 @@
+//easings
+$lines_easing: cubic-bezier(0.74, 0, 0.36, 1.05);
+$slider_easing: cubic-bezier(0.42, 0.05, 0, 1.07);
+$moving_easing: cubic-bezier(0.19, 0.26, 0, 0.99);
+$slow_easing: cubic-bezier(0.8, 0.29, 0, 0.99);
+
+$base_font_size: 16;
+
+//colors
+$cream: #f9e1d5;
+$night: #252537;
+$steel: #1a1a1e;
+$peach: #f36f70;
+$concrete: #f6f6f6;
+$cloud: #6a6969;
+$stone: #333435;
+$wave: #ebebeb;
+$mars: #f84b29;
+$grass: #21d593;
+
+//media queries (notice: there are some local media queries starting with the underscore char: $_scaling_range)
+	//aspect ratios:
+$rect_aspect_ratio: 'min-aspect-ratio: 6/10';
+$square_aspect_ratio: 'min-aspect-ratio: 3/4';
+	// for retina and other HDPI
+$HDPI: 'only screen and (-webkit-min-device-pixel-ratio: 1.3),
+only screen and (-o-min-device-pixel-ratio: 13/10),
+only screen and (min-resolution: 120dpi)';
+
+$max_phones--tiny: 'max-width: 320px';
+$min_phones--tiny: 'min-width: 321px';
+
+$max_phones--small: 'max-width: 375px';
+$min_phones--small: 'min-width: 376px';
+
+$max_phones: 'max-width: 500px';
+$min_phones: 'min-width: 501px';
+
+$max_phones--big: 'max-width: 767px';
+$min_phones--big: 'min-width: 768px';
+
+$max_tablets--portrait: 'max-width: 768px';
+$min_tablets--portrait: 'min-width: 769px';
+
+$max_tablets: 'max-width: 1023px';
+$min_tablets: 'min-width: 1024px';
+
+$max_tablets--landscape: 'max-width: 1024px';
+$min_tablets--landscape: 'min-width: 1025px';
+
+$max_laptop--small: 'max-width: 1280px';
+$min_laptop--small: 'min-width: 1281px';
+
+$max_laptop: 'max-width: 1366px';
+$min_laptop: 'min-width: 1367px';
+
+$max_desktop--small: 'max-width: 1440px';
+$min_desktop--small: 'min-width: 1441px';
+
+$max_desktop: 'max-width: 1600px';
+$min_desktop: 'min-width: 1601px';
+
+$max_fullhd: 'max-width: 1920px';
+$min_fullhd: 'min-width: 1921px';
+
+$max_big: 'max-width: 2047px';
+$min_big: 'min-width: 2048px';
+
+$max_high: 'max-width: 2559px';
+$min_high: 'min-width: 2560px';
+
+$landscape: 'orientation: landscape';
+$portrait: 'orientation: portrait';
+
+//other
+$icons_path: '../img/icons/';
+$other_pics_path: '../img/etc/';
+$background_path: '../img/bg/';
+
+//font families
+$primary_font: Muller, Helvetica, Arial, serif;
+$secondary_font: Playfair Display, Helvetica, Arial, sans-serif;

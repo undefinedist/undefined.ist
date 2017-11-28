@@ -1,0 +1,74 @@
+.decor_square{
+	background-color: $night;
+	box-shadow: 0 17px 42px rgba(140, 99, 78, 0.4);
+}
+.decor_cross{
+	position: relative;
+
+	&:before, &:after{
+		content: "";
+
+		position: absolute;
+
+		background-color: $night;
+	}
+	&:before{
+		height: 100%;
+		width: 1px;
+
+		top: 0;
+		left: calc(50% - 1px);
+	}
+	&:after{
+		width: 100%;
+		height: 1px;
+
+		top: calc(50% - 1px);
+		left: 0;
+	}
+}
+.decor__flying_word_box{
+	position: absolute;
+	left: 24%;
+
+	width: (190em/$base_font_size);
+	height: (600em/$base_font_size);
+
+	&--top{
+		bottom: (-300em/$base_font_size);
+	}
+	&--bottom{
+		top: (-300em/$base_font_size);
+	}
+	&--right{
+		left: auto;
+		right: 20%;
+
+		@media (#{$max_desktop--small}){
+			right: 10%;
+		}
+	}
+
+	.body--mobile &{
+		display: none;
+	}
+}
+.decor__flying_word_img_box{
+}
+.decor__flying_word_img{
+	position: absolute;
+	top: 0;
+	height: (600em/$base_font_size);
+}
+.decor__flying_word_wrapper{
+	//needed to enable resizing
+	@media (#{$min_high}){
+		font-size: 20px;
+	}
+	@media (#{$max_desktop--small}){
+		font-size: 12px;
+	}
+	@media (#{$max_phones--big}){
+		font-size: 1vw;
+	}
+}

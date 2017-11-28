@@ -1,0 +1,370 @@
+$badge_width: 84;
+.purchase{
+	position: relative;
+
+	padding-bottom: 134px;
+
+	background-color: $steel;
+
+	@media (#{$max_tablets}){
+		padding-bottom: 74px;
+	}
+}
+.purchase__info_box{
+	text-align: center;
+	color: white;
+}
+.purchase__by{
+	letter-spacing: 0.06em;
+}
+.purchase__by_logo{
+	vertical-align: middle;
+
+	height: 14px;
+}
+.purchase__title{
+	margin-top: (15em/$base_font_size);
+	margin-bottom: (50em/$base_font_size);
+	padding: 0 15px;
+
+	font-size: (30em/$base_font_size);
+	letter-spacing: 0.085em;
+
+	@media (#{$max_tablets}){
+		margin-bottom: 40px;
+	}
+	@media (#{$max_phones}){
+		font-size: 1.275em;
+		margin-top: 7px;
+	}
+}
+.purchase__buy_box{
+	@include clearfix;
+
+	position: relative;
+	z-index: 10;
+
+	max-width: 838px;
+	padding: 0 15px;
+	margin: auto;
+}
+.purchase__buy_card{
+	position: relative;
+
+	width: 44%;
+	height: 662px;
+	padding: 31px 0 0;
+
+	background-color: white;
+	box-shadow: 0 17px 42px rgba(140, 99, 78, 0.4);
+
+	text-align: center;
+
+	&--right{
+		float: right;
+	}
+	&--left{
+		float: left;
+
+		@media (#{$max_tablets}){
+			height: 600px;
+			margin-bottom: 80px !important;
+		}
+	}
+	@media (#{$max_tablets}){
+		float: none;
+
+		max-width: 347px;
+		margin: 0 auto;
+	}
+	@media (#{$max_phones--big}){
+		width: 100%;
+	}
+}
+.purchase__card_title{
+	margin-bottom: 15px;
+
+	color: $steel;
+	font-weight: 700;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+.purchase__card_subtitle{
+	margin-bottom: 25px;
+
+	color: $steel;
+	font-weight: 300;
+	font-size: 13px;
+	opacity: 0.5;
+}
+.purchase__card_price{
+	display: inline-block;
+	position: relative;
+
+	margin-bottom: 52px;
+
+	color: #0065ff;
+	font-size: 38px;
+	font-weight: 700;
+	line-height: 1;
+
+	&:before{
+		content: "$";
+		font-size: 16px;
+		font-weight: 700;
+
+		position: absolute;
+		left: 0;
+		top: 7px;
+		transform: translateX(-150%);
+	}
+}
+.purchase__features_list{
+	@include clear_link;
+}
+.purchase__feature__text{
+	position: relative;
+}
+.purchase__feature_inner_box{
+	opacity: 0;
+	transform: scaleY(0);
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	top: -18px;
+
+	z-index: 10;
+
+	margin: auto;
+
+	background-color: #ebf1fb;
+
+	padding: 18px 16px;
+
+	text-align: center;
+
+	transition: opacity 0.25s ease, transform 0.5s $slow_easing;
+	transform-origin: center top;
+	
+	&.state-opened{
+		opacity: 1;
+		transform: none;
+
+		.purchase__feature_inner_box__title{
+			opacity: 1;
+		}
+		.purchase__feature_inner_box__text{
+			opacity: 1;
+		}
+	}
+}
+.purchase__feature_inner_box__title{
+	cursor: pointer;
+	opacity: 0;
+
+	border-bottom: 1px dotted rgba($steel, 0.6);
+
+	transition: border-bottom-color 0.25s ease, opacity 0.5s 0.4s ease;
+
+	&:hover{
+		border-bottom-color: rgba($steel, 1);
+	}
+}
+.purchase__feature_inner_box__text{
+	display: block;
+	opacity: 0;
+
+	margin-top: 10px;
+
+	line-height: 1.45;
+	
+	transition: opacity 0.5s 0.45s ease;
+}
+.purchase__feature{
+	position: relative;
+
+	margin-bottom: 20px;
+
+	color: $steel;
+	font-size: 14px;
+
+	&--dotted{
+		.purchase__feature__text{
+			cursor: pointer;
+
+			border-bottom: 1px dotted rgba($steel, 0.6);
+
+			transition: border-bottom-color 0.25s ease;
+
+			&:hover{
+				border-bottom-color: rgba($steel, 1);
+			}
+		}
+	}
+}
+.purchase__feature__info_link{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+
+	border-radius: 50%;
+	margin-left: 5px;
+	border: 1px solid rgba(#18191c, 0.2);
+
+	height: 19px;
+	width: 19px;
+
+	&:before{
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+
+		background: url(#{$icons_path}i--question-mark.svg) no-repeat center / 90% 90%;
+	}
+
+	transition: border-color 0.25s ease;
+
+	&:hover{
+		border: 1px solid rgba(#18191c, 1);
+	}
+}
+.purchase__button_box{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	margin: auto;
+
+	padding: 25px 60px;
+	border-top: 1px solid #e1e1e1;
+
+	@media (#{$max_phones}){
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+}
+.purchase__button{
+	width: 100%;
+
+	font-size: 16px;
+}
+.purchase__card_badge{
+	position: absolute;
+	right: -#{$badge_width/2.3}px;
+	top: -#{$badge_width/2.5}px;
+
+	height: #{$badge_width}px;
+	width: #{$badge_width}px;
+
+	background: url(#{$other_pics_path}star-badge.svg) no-repeat center / 100% 100%;
+}
+.purchase__card_badge__text{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 22%;
+
+	margin: auto;
+
+	color: white;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.065em;
+}
+
+.purchase__features_box{
+	@include clearfix;
+
+	max-width: 1000px;
+	margin: 100px auto auto;
+
+	text-align: left;
+
+	padding: 0 15px;
+
+	@media (#{$max_tablets}){
+		margin-bottom: -40px;
+
+		text-align: center;
+	}
+}
+.purchase__features__item{
+	float: left;
+
+	width: 25%;
+
+	@media (#{$max_tablets}){
+		width: 50%;
+
+		margin-bottom: 40px;
+	}
+	@media (#{$max_phones}){
+		width: 100%;
+	}
+}
+.purchase__features__title{
+	margin-bottom: 13px;
+
+	color: white;
+	font-weight: 700;
+	font-size: 11px;
+	letter-spacing: 0.1em;
+
+	text-transform: uppercase;
+
+	transform: translateY(-30%);
+	opacity: 0;
+	transition: transform 0.7s $slow_easing, opacity 0.5s ease;
+
+	&.skrollable-between{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.purchase__features__item{
+	// no more than 10 feature items expected
+	@for $i from 1 through 10 {
+		// each feature item appears with a small delay
+		&:nth-child(#{$i}) .purchase__features__title,
+		&:nth-child(#{$i}) .purchase__features__text{
+			transition-delay: #{70 * ($i - 1)}ms;
+		}
+	}
+}
+.purchase__features__text{
+	display: inline-block;
+
+	max-width: 210px;
+
+	color: #747474;
+	font-size: 14px;
+	font-weight: 400;
+
+	transform: translateY(-10%);
+	opacity: 0;
+	transition: transform 0.7s $slow_easing, opacity 0.5s ease;
+
+	&.skrollable-between{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.purchase__diamond{
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+
+	top: -1px;
+	margin-left: 2px;
+
+	width: 18px;
+	height: 18px;
+
+	background: url(#{$other_pics_path}emoji_diamond.png) no-repeat center / 100% auto;
+}
+
+

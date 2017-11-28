@@ -1,0 +1,377 @@
+extends ../layout
+block additional_head_tags
+block title
+	| UNDEFINEDIST - The group of people can't be defined
+block content
+	include ../data/links
+
+	.loader.js-loader-section
+		.loader__finishing_overlay.js-loader-finishing-overlay
+		.loader__container
+			.loader__text_box__big_vertical_line
+			.loader__text_box__big_horizontal_line_box
+				.loader__container.loader__container_horizontal_line_box
+					.loader__percent
+						//- Hidden percent is needed to take space.
+						| #[span.loader__percent__hidden 100%]
+						//- Hidden percents are shown one by one with fancy animation to create effect of a moving progress. After animation is finished, loader is stuck ata random value between 60 and 90. After the last intro image is loaded the intro appears.
+						| #[span.loader__percent__value.js-percent 0%]
+
+					br
+					.loader__title
+						| UNDEFINEDIST
+				.loader__text_box__big_horizontal_line
+
+	section.intro.js-intro-section
+		.intro__container
+			.intro__slider_box
+					.intro__slider_square.decor_square
+					.intro__slider_line
+					.intro__slider.js-intro-image-section
+						//use square images for the best look
+						img.intro__slider_item.js-main-slider-item.js-intro-image.state-active-slide(src="img/pictures/main_slider_prod/freelancer.jpg", data-slide-index="1")
+						img.intro__slider_item.js-main-slider-item.js-intro-image(src="img/pictures/main_slider_prod/agency.jpg", data-slide-index="2")
+						img.intro__slider_item.js-main-slider-item.js-intro-image(src="img/pictures/main_slider_prod/architecture2.jpg", data-slide-index="3")
+						img.intro__slider_item.js-main-slider-item.js-intro-image(src="img/pictures/main_slider_prod/architecture.jpg", data-slide-index="4")
+						img.intro__slider_item.js-main-slider-item.js-intro-image(src="img/pictures/main_slider_prod/graphic.jpg", data-slide-index="5")
+						img.intro__slider_item.js-main-slider-item.js-intro-image(src="img/pictures/main_slider_prod/photographer.jpg", data-slide-index="6")
+						.intro__slider_item.intro__slider_item--shadow
+					.intro__slider_dots_box.js-slider-dots-box
+						button.intro__slider_dot.state-active.js-slider-dot(data-slide-index="1", type="button")
+						button.intro__slider_dot.js-slider-dot(data-slide-index="2", type="button")
+						button.intro__slider_dot.js-slider-dot(data-slide-index="3", type="button")
+						button.intro__slider_dot.js-slider-dot(data-slide-index="4", type="button")
+						button.intro__slider_dot.js-slider-dot(data-slide-index="5", type="button")
+						button.intro__slider_dot.js-slider-dot(data-slide-index="6", type="button")
+
+				.intro__text_box
+					.intro__audience_box
+						span.intro__audience_box__prefix
+							| Undefinedist for&nbsp;
+						span.intro__audience_box__hidden_placeholder
+							span.intro__audience_box__hidden_placeholder__text
+								| New&nbsp;York
+							span.intro__audience_box__item.js-case-title.state-visible(data-slide-index="1")
+								| Los Angeles
+							span.intro__audience_box__item.js-case-title(data-slide-index="2")
+								| Tokyo
+							span.intro__audience_box__item.js-case-title(data-slide-index="3")
+								| London
+							span.intro__audience_box__item.js-case-title(data-slide-index="4")
+								| Paris
+							span.intro__audience_box__item.js-case-title(data-slide-index="5")
+								| Interlaken
+							span.intro__audience_box__item.js-case-title(data-slide-index="6")
+								| Seoul
+
+					.intro__text_box__cross.decor_cross
+					.intro__text_content
+						h2.intro__title
+							span.intro__title_visible_word
+								| undfnd
+							span.intro__title_hidden_word
+								| undfnd
+						h1.intro__subtitle
+							p.intro__subtitle_visible_word
+								| UNDEFINEDIST #[br]who can't be defined
+							//hidden word is needed to take space
+							p.intro__subtitle_hidden_word
+								| UNDEFINEDIST #[br]who can't be defined
+
+						.intro__button_box.intro__buy_button_box
+							a.button.button--white.button--cream-shadow(href=links.purchase)
+								| Contact Us
+						.intro__button_box.intro__live_button_box.js-scroll-intro-section-down
+							a.button.button--white.button--cream-shadow(href="#")
+								| Contact Us
+
+						.intro__text_box__line
+						.intro__text_box__square.decor_square
+						.intro__text_box__big_line
+
+				.intro__scroll_down_box
+					.intro__scroll_down_line()
+				button.intro__scroll_down_word.js-scroll-intro-section-down(type="button")
+					img.intro__scroll_down_word_img(src="img/etc/scroll_down.svg", alt="Scroll Down")
+
+	section.paragraphs
+		.paragraphs_box.paragraphs_box--top
+			.paragraphs__item.paragraphs__item--01.js-appearing-content(data-bottom-top="transform: translateZ(0) translateY(20%); opacity: 0;", data-top-bottom="transform: translateZ(0) translateY(-20%);" data--100-bottom="opacity:1;")
+				h2.paragraphs__item__title
+					| Online Travel Agency
+				p.paragraphs__item__text
+					| We help our partners to promote and sell their acivities to international customers through Social networks with offline promotions with multiple languages. Our specialized and customized local promotions help tour operators and activity providers to be seen to international customers. 
+				span.paragraphs__item__number(data-bottom-top="transform: translateZ(0) translateY(5%); opacity: 0;", data-top-bottom="transform: translateZ(0) translateY(-20%);" data--200-bottom="opacity:1;")
+					| 01
+			.paragraphs__item.paragraphs__item--02.js-appearing-content(data-bottom-top="transform: translateZ(0) translateY(20%); opacity: 0;", data-top-bottom="transform: translateZ(0) translateY(-20%);" data--100-bottom="opacity:1;")
+				h2.paragraphs__item__title
+					| Guest Houes(AirBnb)
+				p.paragraphs__item__text
+					| We offer accommodations with local vibes for travelers.
+				span.paragraphs__item__number(data-bottom-top="transform: translateZ(0) translateY(5%); opacity: 0;", data-top-bottom="transform: translateZ(0) translateY(-20%);" data--200-bottom="opacity:1;")
+					| 02
+			.paragraphs_box__decor_word_container
+				.decor__flying_word_box.decor__flying_word_box--top(data-bottom-top="transform: translateY(-2em); ", data-top-bottom="transform: translateY(5em);")
+					.decor__flying_word_img_box
+						img.decor__flying_word_img(src="img/etc/big_word--unique--black.svg")
+		.paragraphs_box.paragraphs_box--middle.paragraphs_box--black
+			.paragraphs_box__decor_word_container
+				.decor__flying_word_box.decor__flying_word_box--bottom(data-bottom-top="transform: translateY(-2em); ", data-top-bottom="transform: translateY(5em);")
+					.decor__flying_word_img_box
+						img.decor__flying_word_img(src="img/etc/big_word--unique--white.svg")
+			img.paragraphs_box_img.paragraphs_box_img--left(src="img/pictures/mockups/left2.png", data-bottom-top="transform: translateZ(0) translateY(20%); ", data-top-bottom="transform: translateZ(0) translateY(-5%);")
+			img.paragraphs_box_img.paragraphs_box_img--right.js-appearing-content(src="img/pictures/mockups/right.png", data-bottom-top="transform: translateZ(0) translateY(-10%); ", data-top-bottom="transform: translateZ(0) translateY(5%);", data-appear-top-offset="200")
+			.paragraphs__item.paragraphs__item--no_number.js-appearing-content
+				h2.paragraphs__item__title.paragraphs__item__title--cream
+					| Learn, Execute,#[br]Improve, Repeat#[br]and Automate
+				p.paragraphs__item__text.paragraphs__item__text--white
+					| Undefinedist is Group of young and passionate people who want to solve problems. We learn things fast and execute it right away. Then gradually improve the process and quality. Repeat this process untill we are statisfied. Lastly, Automate it and move on.
+				.paragraphs_box_big_line(data-bottom-top="transform: scaleY(0.5);", data-center-bottom="transform: scaleY(1);")
+				.paragraphs_box_line(data-bottom-top="transform: scaleY(0);", data-center-bottom="transform: scaleY(1);")
+			a.paragraphs__button.button.button--cream-border(href=links.premium, target="_blank")
+				| Live Preview
+		.paragraphs_box.paragraphs_box--bottom
+			.paragraphs__item.paragraphs__item--03.js-appearing-content(data-bottom-top="transform: translateZ(0) translateY(20%); opacity: 0;", data-top-bottom="transform: translateZ(0) translateY(-20%);" data--100-bottom="opacity:1;")
+				h2.paragraphs__item__title
+					| System Development
+					.paragraphs_title_line(data-bottom-top="transform: scaleY(0);", data-center-bottom="transform: scaleY(1);")
+					.paragraphs_title_big_line(data-bottom-top="transform: scaleY(0);", data-center-bottom="transform: scaleY(1);")
+					.paragraphs_title_square.decor_square
+				p.paragraphs__item__text
+					| We build useful and automated software to help our customers. Great software can be changed easily to improve for our partners.
+				span.paragraphs__item__number(data-bottom-top="transform: translateZ(0) translateY(5%); opacity: 0;", data-top-bottom="transform: translateZ(0) translateY(-20%);" data--200-bottom="opacity:1;")
+					| 03
+			.paragraphs__item.paragraphs__item--04.js-appearing-content(data-bottom-top="transform: translateZ(0) translateY(20%); opacity: 0;", data-top-bottom="transform: translateZ(0) translateY(-20%);" data--100-bottom="opacity:1;")
+				.paragraphs_box_line(data-bottom-top="transform: scaleY(0);", data-center-bottom="transform: scaleY(1);")
+				h2.paragraphs__item__title
+					| Creative Design
+				p.paragraphs__item__text
+					| Design every products with createive yet pratical visualization. Every compartments has their reason with beauty visual.
+				span.paragraphs__item__number(data-bottom-top="transform: translateZ(0) translateY(5%); opacity: 0;", data-top-bottom="transform: translateZ(0) translateY(-20%);" data--200-bottom="opacity:1;")
+					| 04
+
+	section.features
+		.container
+			// here and below the attrs (data-bottom-top="top: 0;", data-top-bottom="top: 0;") are used to enable special classes by skrollr plugin:
+			//.skrollable
+			//.skrollable-between
+			//.skrollable-before
+			//.skrollable-after
+
+			h2.features__title.lined_title.title.js-appearing-content(data-bottom-top="top: 0;", data-top-bottom="top: 0;")
+				| Royal Features
+			.features__items_box
+				.features__line.features__line--1(data-bottom-top="transform: scaleY(0);", data-center-bottom="transform: scaleY(1);")
+				.features__line.features__line--2(data-bottom-top="transform: scaleY(0);", data-center-bottom="transform: scaleY(1);")
+				.features__line.features__line--3(data-bottom-top="transform: scaleX(0);", data-center-bottom="transform: scaleX(1);")
+				.features__line.features__line--4(data-bottom-top="transform: scaleX(0);", data-center-bottom="transform: scaleX(1);")
+
+				.features__item.features__item--delay.js-appearing-content(data-bottom-top="top: 0;", data-top-bottom="top: 0;")
+					.features__item__content
+						.features__icon.features__icon--play
+						h3.features__item__title
+							| Clean CSS3 animations
+						p.features__item__text
+							| Flawlessly animated, brut creates amazing effect for your audience and brings the site to life.
+				.features__item.js-appearing-content(data-bottom-top="top: 0;", data-top-bottom="top: 0;")
+					.features__item__content
+						.features__icon.features__icon--diamond
+						h3.features__item__title
+							| brilliant design
+						p.features__item__text
+							| Top notch user interface design made minimalistic. Brut is born to impress and attract attention.
+				.features__item.features__item--delay.js-appearing-content(data-bottom-top="top: 0;", data-top-bottom="top: 0;")
+					.features__item__content
+						.features__icon.features__icon--star
+						h3.features__item__title
+							| Exclusive showcase
+						p.features__item__text
+							| A great portfolio deserves a great home. With brut you are ready to impress your fans in 5 minutes.
+
+				.features__item.js-appearing-content(data-bottom-top="top: 0;", data-top-bottom="top: 0;")
+					.features__item__content
+						.features__icon.features__icon--tweaks
+						h3.features__item__title
+							| powerful admin panel
+						p.features__item__text
+							| Enjoy the one click installation. Intuitive admin dashboard grants full SEO and appearance control.
+				.features__item.features__item--desktop.js-appearing-content
+					.features__call_to_action_box
+						h3.features__call_to_action_title
+							| See
+							br
+							| More
+							br
+							| features
+						a.button.button--white.button--cream-shadow(href=links.live, target="_blank")
+							| Live Preview
+				.features__item.features__item--mobile.js-appearing-content
+					.features__item__content
+						.features__icon.features__icon--mobile
+						h3.features__item__title
+							| Fully responsive
+						p.features__item__text
+							| Any brut website will look splendid and work great in all popular devices and platforms.
+
+				.features__item.js-appearing-content(data-bottom-top="top: 0;", data-top-bottom="top: 0;")
+					.features__item__content
+						.features__icon.features__icon--media
+						h3.features__item__title
+							| MULTIMEDIA POST
+						p.features__item__text
+							| Brut supports all type of media: pictures, video, audio, text. Feel free to embed an iframe code.
+
+				.features__item.features__item--delay.js-appearing-content(data-bottom-top="top: 0;", data-top-bottom="top: 0;")
+					.features__item__content
+						.features__icon.features__icon--code
+						h3.features__item__title
+							| Free updates
+						p.features__item__text
+							| All licenses are granted a life-time updates access. We work constantly to improve our projects.
+				.features__item.js-appearing-content(data-bottom-top="top: 0;", data-top-bottom="top: 0;")
+					.features__item__content
+						.features__icon.features__icon--zoom
+						h3.features__item__title
+							| SVG icons
+						p.features__item__text
+							| Brut comes with built in unique SVG icons pack. Including all the popular social networks.
+				.features__item.features__item--delay.js-appearing-content.features__item--desktop(data-bottom-top="top: 0;", data-top-bottom="top: 0;")
+					.features__item__content
+						.features__icon.features__icon--mobile
+						h3.features__item__title
+							| Fully responsive
+						p.features__item__text
+							| Any brut website will look splendid and work great in all popular devices and platforms.
+				.features__item.features__item--mobile.js-appearing-content
+					.features__call_to_action_box
+						h3.features__call_to_action_title
+							| See
+							br
+							| More
+							br
+							| features
+						a.button.button--white.button--cream-shadow(href=links.live, target="_blank")
+							| Live Preview
+
+	section.testimonials
+		.testimonials__container
+			.testimonials__header_box
+				h2.testimonials__title.title.js-appearing-content(data-bottom-top="top: 0;", data-top-bottom="top: 0;")
+					| what people say
+				.testimonials__header_item.js-testimonials-header.state-active(style="background-image: url(img/bg/testimonials_slider_header/bg_01.jpg)", data-index="1")
+					.testimonials__header_item__overlay.js-appearing-content(data-bottom-top="background-color: rgba(26,26,30,1);", data-center-bottom="background-color: rgba(26,26,30,0.45);")
+				.testimonials__header_item.js-testimonials-header(style="background-image: url(img/pictures/testimonials/02-bg.jpg)", data-index="2")
+					.testimonials__header_item__overlay
+				.testimonials__header_item.js-testimonials-header(style="background-image: url(img/pictures/testimonials/03_bg.jpg)", data-index="3")
+					.testimonials__header_item__overlay
+				.testimonials__header_item.js-testimonials-header(style="background-image: url(img/pictures/testimonials/04_bg.jpg)", data-index="4")
+					.testimonials__header_item__overlay
+				.testimonials__header_item.js-testimonials-header(style="background-image: url(img/pictures/testimonials/06_bg.jpg)", data-index="5")
+					.testimonials__header_item__overlay
+				.testimonials__header_item.js-testimonials-header(style="background-image: url(img/pictures/testimonials/07_bg.jpg)", data-index="6")
+					.testimonials__header_item__overlay
+			.testimonials__laptop_box
+				.testimonials__laptop
+					button.testimonials__arrow.testimonials__arrow--left.js-prev-testimonial(type="button")
+					button.testimonials__arrow.testimonials__arrow--right.js-next-testimonial(type="button")
+
+					.testimonials__laptop_img(style="background-image: url(img/pictures/mockups/center.png)")
+					.testimonials__wrapper.js-testimonials-wrapper.state-hide-next-item
+						.testimonials__laptop_content_box.js-testimonials-slider-item.state-active(style="background-image: url(img/bg/testimonials_slider_item/mack_01.jpg)", data-index="1")
+							.testimonials__box
+								.testimonials__text
+									| Brut is exactly what our client asked. Thanks and keep up the excellent work.
+								.testimonials__person_name
+									| Hania Nowicki
+								.testimonials__person_title
+									| E-context studio
+						.testimonials__laptop_content_box.js-testimonials-slider-item.state-next(style="background-image: url(img/pictures/testimonials/02_mack.jpg)", data-index="2")
+							.testimonials__box
+								.testimonials__text(style="font-size: 3.3em;")
+									| It's really wonderful.
+								.testimonials__person_name
+									| Nathan Willis
+								.testimonials__person_title
+									| UX at Samsung
+						.testimonials__laptop_content_box.js-testimonials-slider-item(style="background-image: url(img/pictures/testimonials/03_mack.jpg)", data-index="3")
+							.testimonials__box
+								.testimonials__text
+									| I've never discovered such a gorgeous WordPress theme. You guys brought it to the next level.
+								.testimonials__person_name
+									| Raktim Mukherjee
+								.testimonials__person_title
+									| SWD Agency
+						.testimonials__laptop_content_box.js-testimonials-slider-item.state-previous(style="background-image: url(img/pictures/testimonials/04_mack.jpg)", data-index="4")
+							.testimonials__box
+								.testimonials__text(style="font-size: 1.5em;")
+									| If you need a A+ looking portfolio and don't want to overpay to top agency services you need this. Tons of love guys!
+								.testimonials__person_name
+									| Jeremy Collins
+								.testimonials__person_title
+									| UI/UX master
+						.testimonials__laptop_content_box.js-testimonials-slider-item.state-previous(style="background-image: url(img/pictures/testimonials/06_mack.jpg)", data-index="5")
+							.testimonials__box
+								.testimonials__text(style="font-size: 3.3em;")
+									| That is cool.
+								.testimonials__person_name
+									| Stanislav Goroshaev
+								.testimonials__person_title
+									| Corzilla Agency
+
+						.testimonials__laptop_content_box.js-testimonials-slider-item.state-previous(style="background-image: url(img/pictures/testimonials/07_mack.jpg)", data-index="6")
+							.testimonials__box
+								.testimonials__text(style="font-size: 2.75em;")
+									| Loved the loading animations.
+								.testimonials__person_name
+									| Nazir Hossain
+								.testimonials__person_title
+									| Freelancer
+
+				.testimonials__numbers_box
+					.testimonials__number.js-testimonials-number.state-visible(data-index="1")
+						| 01
+					.testimonials__number.js-testimonials-number(data-index="2")
+						| 02
+					.testimonials__number.js-testimonials-number(data-index="3")
+						| 03
+					.testimonials__number.js-testimonials-number(data-index="4")
+						| 04
+					.testimonials__number.js-testimonials-number(data-index="5")
+						| 05
+					.testimonials__number.js-testimonials-number(data-index="6")
+						| 06
+				.testimonials__laptop_big_line(data-bottom-top="transform: scaleY(0);", data-center-bottom="transform: scaleY(1);")
+				a.testimonials__button.button.button--black-border.button--white.js-appearing-content(href=links.purchase)
+					| Buy Now
+
+		.decor__flying_word_wrapper
+			.decor__flying_word_box.decor__flying_word_box--right.decor__flying_word_box--top(data-bottom-top="transform: translateY(-2em); ", data-top-bottom="transform: translateY(5em);")
+				.decor__flying_word_img_box
+					img.decor__flying_word_img(src="img/etc/big_word--elegant--black.svg")
+	section.for
+		.decor__flying_word_wrapper
+			.decor__flying_word_box.decor__flying_word_box--right.decor__flying_word_box--bottom(data-bottom-top="transform: translateY(-2em); ", data-top-bottom="transform: translateY(5em);")
+				.decor__flying_word_img_box
+					img.decor__flying_word_img(src="img/etc/big_word--elegant--white.svg")
+		h2.for__title.lined_title.title.js-appearing-content(data-bottom-top="top: 0;", data-top-bottom="top: 0;")
+			| for everyone
+		.for__container
+			.for__item.for__item--1.js-appearing-content(style="background-image: url(img/pictures/audience/photo.png)", data-bottom-top="transform: translateZ(0) translateY(0%); opacity: 0;", data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;")
+			.for__item.for__item--2.js-appearing-content(style="background-image: url(img/pictures/audience/agency.png)", data-bottom-top="transform: translateZ(0) translateY(-30%); opacity: 0;", data-top-bottom="transform: translateZ(0) translateY(-0%);" data--100-bottom="opacity:1;")
+			.for__item.for__item--3.js-appearing-content(style="background-image: url(img/pictures/audience/artist.png)", data-bottom-top="transform: translateZ(0) translateY(0%); opacity: 0;", data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;")
+
+			.for__item.for__item--4.js-appearing-content(style="background-image: url(img/pictures/audience/fashion.png)", data-bottom-top="transform: translateZ(0) translateY(5%); opacity: 0;", data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;")
+			.for__item.for__item--5.js-appearing-content(style="background-image: url(img/pictures/audience/designer.png)", data-bottom-top="transform: translateZ(0) translateY(-25%); opacity: 0;", data-top-bottom="transform: translateZ(0) translateY(5%);" data--100-bottom="opacity:1;")
+			.for__item.for__item--6.js-appearing-content(style="background-image: url(img/pictures/audience/architect.png)", data-bottom-top="transform: translateZ(0) translateY(5%); opacity: 0;", data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;")
+
+			.for__item.for__item--7.js-appearing-content(style="background-image: url(img/pictures/audience/jewerly.png)", data-bottom-top="transform: translateZ(0) translateY(10%); opacity: 0;", data-top-bottom="transform: translateZ(0) translateY(-35%);" data--100-bottom="opacity:1;")
+			.for__item.for__item--8.js-appearing-content(style="background-image: url(img/pictures/audience/furniture.png)", data-bottom-top="transform: translateZ(0) translateY(-20%); opacity: 0;", data-top-bottom="transform: translateZ(0) translateY(10%);" data--100-bottom="opacity:1;")
+
+			//extra invisible element to align the siblings
+			.for__item.for__item--9
+
+			.for__overlay
+
+	section.purchase#purchase.js-hide-feature
+
+	include ../components/footer
