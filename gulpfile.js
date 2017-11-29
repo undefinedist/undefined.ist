@@ -82,24 +82,24 @@ gulp.task('jade', function(){
 // images
 gulp.task('img', function() {
 	gulp.src('src/img/**')
-		.pipe(imagemin({
-				progressive: true,
-				optimizationLevel: 1,
-				svgoPlugins: [
-					{removeViewBox: false},
-					{removeDoctype: true},
-					{removeComments: true},
-					{cleanupNumericValues:
-						{floatPrecision: 2}
-					},
-					{convertColors: {
-							names2hex: false,
-							rgb2hex: false
-						}
-					}],
-				use: [pngquant()]
-			}
-		))
+		//.pipe(magemin({
+		//		progressive: true,
+		//		optimizationLevel: 1,
+		//		svgoPlugins: [
+		//			{removeViewBox: false},
+		//			{removeDoctype: true},
+		//			{removeComments: true},
+		//			{cleanupNumericValues:
+		//				{floatPrecision: 2}
+		//			},
+		//			{convertColors: {
+		//					names2hex: false,
+		//					rgb2hex: false
+		//				}
+		//			}],
+		//		use: [pngquant()]
+		//	}
+		//))
 		.pipe(gulp.dest('build/img'))
 });
 
