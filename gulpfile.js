@@ -73,7 +73,6 @@ gulp.task('jade', function(){
 	gulp.src(['src/templates/pages/**.jade'])
 		.pipe(plumber())
 		.pipe(jade({
-			basedir: __dirname,
 			pretty: true
 		}))
 		.pipe(gulp.dest('build/'))
